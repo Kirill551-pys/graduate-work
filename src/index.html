@@ -6,16 +6,6 @@
     <title>Онлайн кинотеатр</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<style>
-   body {
-            background-image: url("background.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            font-family: Roboto, 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-  </style>
 <body>
     <div class="container">
         <header class="header">
@@ -25,35 +15,144 @@
             <button class="button">войти</button>
         </header>
         <nav>
-            <a class="link" href="#">
-                <span class="page-nav__day-week">Пн,</span>
-                <p>31</p>
-                
-            </a>
-            <a class="link" href="#">
-                <span class="page-nav__day-week">Вт,</span>
-                <span class="page-nav__nomber-week">1</span>
-            </a>
-            <a class="link" href="#">
-                <span class="page-nav__day-week">Ср,</span>
-                <span class="page-nav__nomber-week">2</span>
-            </a>
-            <a class="link" href="#">
-                <span class="page-nav__day-week">Чт,</span>
-                <span class="page-nav__nomber-week">3</span>
-            </a>
-            <a class="link" href="#">
-                <span class="page-nav__day-week">Пт,</span>
-                <span class="page-nav__nomber-week">4</span>
-            </a>
-            <a class="link" href="#">
-                <span class="page-nav__day-week">Сб,</span>
-                <span class="page-nav__nomber-week">5</span>
-            </a>
-            <a class="link" href="#">
-                >
-            </a>
+            <div class="day" data-date="2023-10-31">
+                <div class="today">Сегодня</div>
+                <div class="date">Пн, 31</div>
+            </div>
+            <div class="day" data-date="2023-11-01">
+                <div class="week-day">Вт</div> 
+                <div class="date">1</div>
+            </div>
+            <div class="day" data-date="2023-11-02">
+                <div class="week-day">Ср</div>
+                <div class="date">2</div>
+            </div>
+            <div class="day" data-date="2023-11-03">
+                <div class="week-day">Чт</div>
+                <div class="date">3</div>
+            </div>
+            <div class="day" data-date="2023-11-04">
+                <div class="week-day">Пт</div>
+                <div class="date">4</div>
+            </div>
+            <div class="day weekend" data-date="2023-11-05">
+                <div class="week-day">Сб</div>
+                <div class="date">5</div>
+            </div>
+            <div class="arrow" id="scroll-arrow">></div>
         </nav>
+        <main>
+            <section class="custom-selection">
+                <div class="movie_info">
+                    <div class="movie__poster">
+                        <img src="poster1.png" width="125" height="175" alt="Постер">
+                    </div>
+                    <div class="movie_description">
+                        <div class="heading2">
+                            <p>Звёздные войны XXIII: Атака клонированных клонов</p>
+                        </div>
+                        <div class="movie__synopsis">
+                            <p>Две сотни лет назад малороссийские хутора разоряла шайка нехристей-ляхов во главе с могущественным колдуном.</p>
+                        </div>
+                        <div class="movie__data">
+                            <p>130 минут США</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-seances__hall">
+                    <h4 class="heading3">Зал 1</h4> 
+                    <div class="list">
+                        <div class="item">10:20</div>
+                        <div class="item">14:10</div>
+                        <div class="item">18:40</div>
+                        <div class="item">22:00</div>
+                    </div>
+                </div>
+                <div class="movie-seances__hall">
+                    <h4 class="heading4">Зал 2</h4> 
+                    <div class="list">
+                        <div class="item">11:15</div>
+                        <div class="item">14:40</div>
+                        <div class="item">16:00</div>
+                        <div class="item">18:30</div>
+                        <div class="item">21:00</div>
+                        <div class="item">23:30</div>
+                    </div>
+                </div>
+            </section>
+            <section class="custom-selection">
+                <div class="movie_info">
+                    <div class="movie__poster">
+                        <img src="poster2.jpg.png" width="125" height="175" alt="Постер">
+                    </div>
+                    <div class="movie_description">
+                        <div class="heading2">
+                            <p>Альфа</p>
+                        </div>
+                        <div class="movie__synopsis">
+                            <p>20 тысяч лет назад Земля была холодным и неуютным местом, в котором смерть подстерегала человека на каждом шагу.</p>
+                        </div>
+                        <div class="movie__data">
+                            <p>96 минут Франция</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-seances__hall">
+                    <h4 class="heading3">Зал 1</h4> 
+                    <div class="list">
+                        <div class="item">10:20</div>
+                        <div class="item">14:10</div>
+                        <div class="item">18:40</div>
+                        <div class="item">22:00</div>
+                    </div>
+                </div>
+                <div class="movie-seances__hall">
+                    <h4 class="heading4">Зал 2</h4> 
+                    <div class="list">
+                        <div class="item">11:15</div>
+                        <div class="item">14:40</div>
+                        <div class="item">16:00</div>
+                        <div class="item">18:30</div>
+                        <div class="item">21:00</div>
+                        <div class="item">23:30</div>
+                    </div>
+                </div>
+            </section>
+            <section class="custom-selection">
+                <div class="movie_info">
+                    <div class="movie__poster">
+                        <img src="poster2.jpg.png" width="125" height="175" alt="Постер">
+                    </div>
+                    <div class="movie_description">
+                        <div class="heading2">
+                            <p>Хищник</p>
+                        </div>
+                        <div class="movie__synopsis">
+                            <p>Самые опасные хищники Вселенной, прибыв из глубин космоса, высаживаются на улицах маленького городка, чтобы <br>начать свою кровавую охоту. Генетически модернизировав себя с помощью ДНК других видов, охотники стали ещё <br>сильнее, умнее и беспощаднее.</p>
+                        </div>
+                        <div class="movie__data">
+                            <p>101 минут Канада,США</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-seances__hall">
+                    <h4 class="heading3">Зал 1</h4> 
+                    <div class="list">
+                        <div class="item">09:00</div>
+                        <div class="item">10:10</div>
+                        <div class="item">12:55</div>
+                        <div class="item">14:15</div>
+                        <div class="item">14:50</div>
+                        <div class="item">16:30</div>
+                        <div class="item">18:00</div>
+                        <div class="item">18:50</div>
+                        <div class="item">19:50</div>
+                        <div class="item">20:55</div>
+                        <div class="item">22:00</div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
