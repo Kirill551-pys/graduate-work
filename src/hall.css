@@ -109,11 +109,10 @@ p{
     flex-direction: column;
     align-items: flex-start;
     width: 284px; 
-    height: 266px; 
+    height: auto; 
     padding-top: 30px;
     gap: 4px; 
-    position: relative; 
-    overflow: hidden; 
+    position: relative;  
 }
 
 .buying-scheme__wrapper img {
@@ -132,6 +131,7 @@ p{
 }
 
 .buying-scheme__chair {
+    display: flex;
     width: 20px;
     height: 20px;
     border-radius: 4px;
@@ -142,5 +142,12 @@ p{
 .buying-scheme__legend {
     width: 930px;
     max-height: 80px;
-    padding-top: 30px; 
+    padding-top: 30px;
+}
+
+.col {
+    width: 184px;
+    max-height: 50px;
+    max-width: 250px;
+    gap: 10px;
 }
