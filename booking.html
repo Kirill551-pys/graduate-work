@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование</title>
+    <link rel="stylesheet" type="text/css" href="./src/booking.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="table_contents">
+                <strong>ИДЁМ</strong><span class="span">в</span><strong>КИНО</strong>
+            </h1>
+        </header>
+        <main>
+            <section>
+                <div class="frame2">
+                    <header class="main-header">
+                        <heading2 class="h2-tickets">
+                            <h2 class="selected-tickets">Вы выбрали билеты:</h2>
+                        </heading2>
+                    </header>
+                </div>
+                <div class="frame1">
+                    <div class="ticket__info-wrapper">
+                        <div class="ticket__info_1">
+                            <p>На фильм:  <span id="film-title"></span></p>
+                        </div>
+                        <div class="ticket__info_2">
+                            <p>Места: <span>6, 7</span></p>
+                        </div>
+                        <div class="ticket__info_3">
+                            <p>В зале: <span id="hall-number"></span></p>
+                        </div>
+                        <div class="ticket__info_4">
+                            <p>Начало сеанса: <span>18:30</span></p>
+                        </div>
+                        <div class="ticket__info_5">
+                            <p>Стоимость: <span>600 рублей</span></p>
+                        </div>
+                        <button>
+                            <p class="text-qr">Получить код бронирования</p>
+                        </button>
+                        <div class="ticket__hint_1">
+                            <p class="text__hint">После оплаты билет будет доступен в этом окне, а также придёт вам на почту. Покажите QR-код нашему контроллёру у входа в зал.</p>
+                        </div>
+                        <div class="ticket__hint_2">
+                            <p class="text__hint" style="width: 147px;">Приятного просмотра!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./src/booking.js"></script>
+</body>
+</html>

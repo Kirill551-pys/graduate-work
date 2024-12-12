@@ -89,3 +89,16 @@ function updateSessionsDisplay(sessions) {
         sessionsContainer.textContent = 'Нет доступных сеансов на выбранную дату.';
     }
 }
+
+// Получаем все элементы с классом .item
+const links = document.querySelectorAll('.item a');
+
+links.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const film = this.dataset.film;
+        const time = this.dataset.time;
+        const url = `hall.html?film=${film}&time=${time}`;
+        window.location.href = url;
+    });
+});
