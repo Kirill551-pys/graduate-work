@@ -1,4 +1,3 @@
-// Функция для получения параметров из URL
 function getQueryParams() {
     const params = {};
     const queryString = window.location.search.substring(1);
@@ -11,18 +10,14 @@ function getQueryParams() {
     return params;
   }
   
-  // Получаем параметры из URL
   const params = getQueryParams();
-  
-  // Отображаем название фильма и время сеанса
+
   const filmTitle = params.film || 'Неизвестный фильм';
   const sessionTime = params.time || 'Неизвестное время';
-  
-  // Находим элементы на странице для отображения информации
+
   const filmElement = document.getElementById('film-title');
   const timeElement = document.getElementById('session-time');
-  
-  // Устанавливаем текст в элементы
+
   timeElement.textContent = `Начало сеанса: ${sessionTime}`;
   
   const urlParams = new URLSearchParams(window.location.search);
@@ -38,12 +33,7 @@ function getQueryParams() {
     ordinary: [],
     vip: []
   };
-  let movieTitle = filmTitles[film]; // Пример значения
-  let hallNumber = 1; // Пример значения
-  let showtime = sessionTime; // Используем время сеанса из URL-параметра
-  let totalPrice = 0; // Пример значения
-  
-  // Функция для обновления стиля места
+
   function updateChairStyle(chair) {
     const status = chair.dataset.status;
   
@@ -65,7 +55,6 @@ function getQueryParams() {
     }
   }
   
-  // Функция для расчета общей стоимости
   function calculateTotalPrice() {
     let totalPrice = 0;
     selectedSeats.ordinary.forEach(seat => {
@@ -77,17 +66,14 @@ function getQueryParams() {
     return totalPrice;
   }
   
-  // Находим все места на странице
   const chairs = document.querySelectorAll('.buying-scheme__chair');
   
-  // Добавляем обработчики кликов на места
   chairs.forEach(chair => {
     updateChairStyle(chair);
   
     chair.addEventListener('click', function() {
       if (this.dataset.status !== 'booked') {
         if (this.dataset.status === 'selected') {
-          // Убираем место из выбранных
           this.dataset.status = 'available';
           if (this.dataset.price === '250') {
             selectedSeats.ordinary = selectedSeats.ordinary.filter(seat => seat.seatNumber !== this.dataset.chairId);
@@ -95,7 +81,6 @@ function getQueryParams() {
             selectedSeats.vip = selectedSeats.vip.filter(seat => seat.seatNumber !== this.dataset.chairId);
           }
         } else {
-          // Добавляем место в выбранные
           this.dataset.status = 'selected';
           if (this.dataset.price === '250') {
             selectedSeats.ordinary.push({ seatNumber: this.dataset.chairId, price: this.dataset.price });
@@ -109,17 +94,14 @@ function getQueryParams() {
     });
   });
   
-  // Добавляем обработчик клика на кнопку
   document.querySelector('button').addEventListener('click', function() {
     if (selectedSeats.ordinary.length > 0 || selectedSeats.vip.length > 0 || Object.keys(selectedSeats).length > 0) {
-      // Сохраняем данные в localStorage
       localStorage.setItem('movieTitle', movieTitle);
       localStorage.setItem('hallNumber', hallNumber);
       localStorage.setItem('showtime', showtime);
       localStorage.setItem('selectedSeats', JSON.stringify(selectedSeats));
       localStorage.setItem('ticketPrice', totalPrice);
   
-      // Переход на страницу бронирования
       window.location.href = 'booking.html';
     } else {
       alert('Пожалуйста, выберите хотя бы одно место.');

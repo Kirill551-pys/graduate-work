@@ -189,7 +189,7 @@ p{
 
 .buying-scheme__legend-price {
     display: flex;
-    cursor: default; /* Убираем курсор для легенды */
+    cursor: default;
     pointer-events: none;
 }
 
