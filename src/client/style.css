@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-    background-image: url("background.png");
+    background-image: url("./img/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex; 
@@ -73,6 +73,7 @@ nav {
 }
 
 .day {
+    padding: 20px;
     width: 124px;
     height: 48px;
     border-radius: 2px;
@@ -82,11 +83,12 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    transition: transform 0.2s;
+    box-shadow: 0px 2px 2px 0px #0000003D;
 }
-
-.day.selected {
-    transform: scale(1.1); 
+.day:hover {
+    transform: scale(1.05);
 }
 
 .weekend {
@@ -107,97 +109,46 @@ nav {
 }
 
 /* Контент */
-main {
-    width: 100%;
-    max-width: 990px;
-    height: 1028px; 
-    margin-top: 30px; 
-    display: flex; 
-    flex-direction: column; 
-}
 
-.custom-selection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%; 
-    max-width: 990px; 
-    height: 350px; 
-    padding: 15px;
+#movies-container {
+    display: flex; /* Включаем Flexbox */
+    flex-wrap: wrap; /* Позволяем элементам переноситься на следующую строку */
+    justify-content: space-between;
+}
+.movie {
+    background-color: #F1EBE6F2;
     border-radius: 2px;
-    background: #F1EBE6F2;
-    margin-bottom: 30px;
+    margin: 10px;
+    padding: 10px;
+    width: 990px;
+    height: 350px;
+    transition: transform 0.2s;
 }
 
-.movie_info {
-    display: flex; 
-    align-items: flex-start; 
+.movie:hover {
+    transform: scale(1.05);
 }
 
-.movie__poster img {
-    object-fit: cover; 
+.movie img {
+    width: 125px;
+    height: 205px;
+    padding-bottom: 30px;
+    grid-column: span 2 / 5;
+    grid-row: span 2 / 1;
 }
 
-.movie_description {
-    display: flex; 
-    flex-direction: column; 
-    padding-left: 15px;
-}
-
-.heading2 {
+.movie h2 {
+    height: 18px;
+    padding-right: 415px;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    margin-bottom: 10px;
+    color: #000000;
 }
 
-.movie__synopsis {
+.movie p {
+    color: #000000;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    margin-bottom: 10px;
-}
-.movie__data {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 10px;
-}
-
-.movie-seances__hall {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 960px;
-    height: 63px;
-    margin-top: 7px;
-}
-
-.heading3 {
-    max-width: 960px;
-    height: 18px;
-    padding-bottom: 30px;
-}
-
-.list {
-    display: flex;
-    max-width: 960px;
-    height: 37px;
-    padding-bottom: 4px;
-    gap: 4px;
-}
-.item {
-    width: 53px;
-    height: 33px;
-    border-radius: 2px;
-    background: #FFFFFF;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 17px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

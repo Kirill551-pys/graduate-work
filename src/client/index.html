@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн кинотеатр</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="table_contents">
+            <strong>ИДЁМ</strong><span class="span">в</span><strong>КИНО</strong>
+            </h1>
+            <button class="button">войти</button>
+        </header>
+        <nav>
+            <div class="day" data-date="2023-10-31">
+                <div class="today">Сегодня</div>
+                <div class="date">Пн, 31</div>
+            </div>
+            <div class="day" data-date="2023-11-01">
+                <div class="week-day">Вт,</div> 
+                <div class="date">1</div>
+            </div>
+            <div class="day" data-date="2023-11-02">
+                <div class="week-day">Ср,</div>
+                <div class="date">2</div>
+            </div>
+            <div class="day" data-date="2023-11-03">
+                <div class="week-day">Чт,</div>
+                <div class="date">3</div>
+            </div>
+            <div class="day" data-date="2023-11-04">
+                <div class="week-day">Пт,</div>
+                <div class="date">4</div>
+            </div>
+            <div class="day weekend" data-date="2023-11-05">
+                <div class="week-day">Сб,</div>
+                <div class="date">5</div>
+            </div>
+            <div class="day weekend" data-date="2023-11-06">
+                <div class="week-day">Вс,</div>
+                <div class="date">6</div>
+            </div>
+        </nav>
+        <main id="movies-container"></main>
+        <div id="halls-container"></div>
+        <div id="seances-container"></div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
